@@ -1,7 +1,10 @@
+import { useState } from 'react'
+
 import './index.css'
 import { Button, Input } from '../../components'
 
 export const HomeScreen = () => {
+  const [username, setUsername] = useState('')
   return (
     <div className="home-screen-container">
       <div className="home-screen-content-container">
@@ -21,7 +24,12 @@ export const HomeScreen = () => {
           Digite abaixo seu usuário para ter acesso a sua lista de compras:
         </h3>
 
-        <Input label="Username" placeholder="Ex: usuario1" />
+        <Input
+          onChange={text => setUsername(text)}
+          value={username}
+          label="Username"
+          placeholder="Ex: usuario1"
+        />
         <div className="home-screen-button-container">
           <Button>Continuar</Button>
         </div>
