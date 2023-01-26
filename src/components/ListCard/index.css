@@ -3,14 +3,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  width: 100%;
+  width: 732px;
   height: 58px;
-  min-height: 58px;
-  padding: 0px 12px;
   background-color: #7785db;
   border-radius: 12px;
   margin-bottom: 24px;
-  cursor: pointer;
+  padding: 0 12px;
 }
 
 .checkbox {
