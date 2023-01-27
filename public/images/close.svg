@@ -1,0 +1,19 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="16" height="16" fill="#1E1E1E"/>
+<g id="MacBook Pro 14&#34; - 2" clip-path="url(#clip0_4_196)">
+<rect width="1512" height="982" transform="translate(-1468 -34)" fill="#7785DB"/>
+<rect id="overlay" opacity="0.5" x="-1468" y="-34" width="1512" height="982" fill="black"/>
+<g id="sidepanel">
+<rect width="500" height="976" transform="translate(-456 -28)" fill="white"/>
+<g id="icon/close">
+<rect id="Rectangle 13" width="1.42299" height="20.8705" rx="0.711495" transform="matrix(0.699035 0.715087 -0.699035 0.715087 15.0054 0.0581665)" fill="#7785DB"/>
+<rect id="Rectangle 14" width="1.42299" height="20.8705" rx="0.711495" transform="matrix(0.699035 -0.715087 0.699035 0.715087 0 1.01758)" fill="#7785DB"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_4_196">
+<rect width="1512" height="982" fill="white" transform="translate(-1468 -34)"/>
+</clipPath>
+</defs>
+</svg>
