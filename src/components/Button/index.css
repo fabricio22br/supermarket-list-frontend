@@ -30,3 +30,9 @@
   object-fit: contain;
   margin-right: 6px;
 }
+
+@media screen and (max-widht: 420px) {
+  .button-container {
+    max-width: 300px;
+  }
+}
