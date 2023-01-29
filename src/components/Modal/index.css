@@ -24,7 +24,7 @@
   padding-right: 24px;
 }
 
-.modal-header {
+.modal-title {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -51,27 +51,26 @@
   height: 16vh;
   width: 100%;
   justify-content: space-between;
-  margin-top: 44vh;
+  margin-top: 46vh;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 830px) {
   .modal-content {
-    width: 100vw;
-  }
-
-  .buttons-container {
-    height: 18;
-    margin-top: 44vh;
+    width: 60vw;
   }
 }
 
 @media screen and (max-width: 420px) {
   .modal-content {
-    width: 100vw;
+    width: 90vw;
+  }
+
+  .list-card-modal {
+    margin-left: 32%;
   }
 
   .buttons-container {
-    height: 18;
-    margin-top: 44vh;
+    height: 18vh;
+    margin-top: 42vh;
   }
 }

@@ -66,22 +66,24 @@ export const Modal = ({ onClose, item }) => {
   return (
     <div className="modal">
       <div className="modal-content">
-        <div className="modal-header">
+        <div className="modal-title">
           <h1>{item ? 'Editar item' : 'Adicionar novo item'}</h1>
           <button onClick={onClose} className="modal-close-button" />
         </div>
-        <Input
-          onChange={text => setName(text)}
-          value={name}
-          label="Nome"
-          placeholder="Ex: Arroz"
-        />
-        <Input
-          onChange={text => setQuantity(text)}
-          value={quantity}
-          label="Quantidade"
-          type="number"
-        />
+        <div className="list-card-modal">
+          <Input
+            onChange={text => setName(text)}
+            value={name}
+            label="Nome"
+            placeholder="Ex: Arroz"
+          />
+          <Input
+            onChange={text => setQuantity(text)}
+            value={quantity}
+            label="Quantidade"
+            type="number"
+          />
+        </div>
         <div className="buttons-container">
           {item && (
             <Button icon="trash" variant="outline" onClick={callDeleteItem}>
