@@ -1,4 +1,4 @@
-import { ListCard } from '../ListCard'
+import { ListCard } from 'components/ListCard'
 import './index.css'
 
 export const ListRender = ({ list, onEdit, onCheckItem }) => {
@@ -8,7 +8,7 @@ export const ListRender = ({ list, onEdit, onCheckItem }) => {
 
   return (
     <div className="list-render-container">
-      {list.map(item => (
+      {list.map((item) => (
         <ListCard
           onCheckItem={onCheckItem}
           onClick={onEdit}

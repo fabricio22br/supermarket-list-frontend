@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './index.css'
-import { getList, updateItem } from '../../services/request'
-import { Button, ListRender, Loader, Modal } from '../../components'
+import { getList, updateItem } from 'services/request'
+import { Button, ListRender, Loader, Modal } from 'components'
 
 export const ListScreen = () => {
   const [modalVisible, setModalVisible] = useState(false)
@@ -32,12 +32,12 @@ export const ListScreen = () => {
     setSelectedItem(null)
   }
 
-  const onEditItem = item => {
+  const onEditItem = (item) => {
     setSelectedItem(item)
     setModalVisible(true)
   }
 
-  const onCheckItem = async item => {
+  const onCheckItem = async (item) => {
     const result = await updateItem(item._id, {
       ...item,
       checked: !item.checked

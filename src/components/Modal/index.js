@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import './index.css'
-import { Input } from '../Input'
-import { Button } from '../Button'
-import { createItem, updateItem, deleteItem } from '../../services/request'
+import { Input } from 'components/Input'
+import { Button } from 'components/Button'
+import { createItem, updateItem, deleteItem } from 'services/request'
 
 export const Modal = ({ onClose, item }) => {
   const [name, setName] = useState('')
@@ -72,13 +72,13 @@ export const Modal = ({ onClose, item }) => {
         </div>
         <div className="list-card-modal">
           <Input
-            onChange={text => setName(text)}
+            onChange={(text) => setName(text)}
             value={name}
             label="Nome"
             placeholder="Ex: Arroz"
           />
           <Input
-            onChange={text => setQuantity(text)}
+            onChange={(text) => setQuantity(text)}
             value={quantity}
             label="Quantidade"
             type="number"

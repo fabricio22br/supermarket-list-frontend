@@ -1,4 +1,4 @@
-import { api } from '../api'
+import { api } from 'services/api'
 
 export const getList = async () => {
   try {
@@ -10,7 +10,7 @@ export const getList = async () => {
   }
 }
 
-export const createItem = async item => {
+export const createItem = async (item) => {
   try {
     const result = await api.post('/list-item', {
       ...item
@@ -34,7 +34,7 @@ export const updateItem = async (id, item) => {
   }
 }
 
-export const deleteItem = async id => {
+export const deleteItem = async (id) => {
   try {
     const result = await api.delete(`/list-item/${id}`)
     return result.data
