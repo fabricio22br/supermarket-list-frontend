@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import './index.css'
 import { Input } from 'components/Input'
-import { Button } from 'components/Button'
+import { Button } from 'components/atoms/Button'
 import { createItem, updateItem, deleteItem } from 'services/request'
+import { Title } from 'components/atoms'
 
 export const Modal = ({ onClose, item }) => {
   const [name, setName] = useState('')
@@ -67,7 +68,7 @@ export const Modal = ({ onClose, item }) => {
     <div className="modal">
       <div className="modal-content">
         <div className="modal-title">
-          <h1>{item ? 'Editar item' : 'Adicionar novo item'}</h1>
+          <Title>{item ? 'Editar item' : 'Adicionar novo item'}</Title>
           <button onClick={onClose} className="modal-close-button" />
         </div>
         <div className="list-card-modal">

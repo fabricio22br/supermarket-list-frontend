@@ -48,26 +48,6 @@ export const BagImage = styled.img.attrs({
   }
 `
 
-export const Title = styled.h1`
-  max-width: 320px;
-  text-align: center;
-
-  @media screen and (max-widht: 420px) {
-    max-width: 300px;
-  }
-`
-
-export const SubTitle = styled.h3`
-  max-width: ${({ mw }) => mw || 452}px;
-  text-align: ${({ align }) => align || 'center'};
-  margin-bottom: ${({ mb }) => mb || 48}px;
-
-  @media screen and (max-widht: 420px) {
-    max-width: 300px;
-    margin-bottom: ${({ mb }) => mb || 24}px;
-  }
-`
-
 export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
