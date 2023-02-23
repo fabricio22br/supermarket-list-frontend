@@ -1,4 +1,6 @@
-.input-container {
+import styled from 'styled-components'
+
+export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -8,32 +10,30 @@
   border-radius: 8px;
   border-width: 2px;
   border-style: solid;
-  border-color: #7785db;
+  border-color: ${({ theme }) => theme.colors.primary};
   border-style: solid;
   margin-bottom: 16px;
-}
 
-.input-label {
+  @media (max-width: 420px) {
+    max-width: 300px;
+  }
+`
+
+export const InputLabel = styled.label`
   font-size: 12px;
   margin: 0px;
   padding-top: 6px;
   padding-left: 6px;
   padding-bottom: 4px;
-}
+`
 
-.input {
+export const InputText = styled.input`
   border: 0px transparent;
   padding-left: 6px;
   font-size: 16px;
   font-family: 'Avenir Next';
-}
 
-.input:focus {
-  outline: none;
-}
-
-@media screen and (max-widht: 420px) {
-  .input-container {
-    max-width: 300px;
+  :focus {
+    outline: none;
   }
-}
+`

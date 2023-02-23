@@ -1,4 +1,6 @@
-.list-card-container {
+import styled from 'styled-components'
+
+export const CardContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -7,12 +9,12 @@
   height: 58px;
   min-height: 58px;
   padding: 0px 12px;
-  background-color: #f2f4ff;
+  background-color: ${({ theme }) => theme.colors.light};
   border-radius: 12px;
   margin-bottom: 24px;
-}
+`
 
-.checkbox {
+export const CheckImage = styled.img`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,35 +23,28 @@
   object-fit: contain;
   cursor: pointer;
   margin-right: 12px;
-}
+`
 
-.list-card-text-container {
+export const TextContainer = styled.div`
   display: flex;
   width: 96%;
   flex-direction: column;
-}
+`
 
-.list-card-title {
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 4px;
-}
-
-.list-card-subtitle {
-  font-size: 16px;
-}
-
-.arrow-icon-container {
+export const ArrowIconContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
   width: 10%;
   cursor: pointer;
-}
+`
 
-.arrow-icon {
+export const ArrowIcon = styled.img.attrs({
+  src: '/images/arrow.svg',
+  alt: 'arrow-icon'
+})`
   width: 6px;
   height: 12px;
   object-fit: contain;
-}
+`

@@ -1,9 +1,14 @@
 import { useEffect, useState } from 'react'
-import './index.css'
-import { Input } from 'components/Input'
-import { Button } from 'components/atoms/Button'
+import { Input } from 'components/molecules'
 import { createItem, updateItem, deleteItem } from 'services/request'
-import { Title } from 'components/atoms'
+import { Title, Button } from 'components/atoms'
+import {
+  ModalBackgroundContainer,
+  ModalContentContainer,
+  ModalTitleContainer,
+  ModalCloseButton,
+  ButtonsContainer
+} from './styles'
 
 export const Modal = ({ onClose, item }) => {
   const [name, setName] = useState('')
@@ -65,12 +70,12 @@ export const Modal = ({ onClose, item }) => {
   }, [item])
 
   return (
-    <div className="modal">
-      <div className="modal-content">
-        <div className="modal-title">
+    <ModalBackgroundContainer>
+      <ModalContentContainer>
+        <ModalTitleContainer>
           <Title>{item ? 'Editar item' : 'Adicionar novo item'}</Title>
-          <button onClick={onClose} className="modal-close-button" />
-        </div>
+          <ModalCloseButton onClick={onClose} />
+        </ModalTitleContainer>
         <div className="list-card-modal">
           <Input
             onChange={(text) => setName(text)}
@@ -85,7 +90,7 @@ export const Modal = ({ onClose, item }) => {
             type="number"
           />
         </div>
-        <div className="buttons-container">
+        <ButtonsContainer>
           {item && (
             <Button icon="trash" variant="outline" onClick={callDeleteItem}>
               Deletar item
@@ -94,8 +99,8 @@ export const Modal = ({ onClose, item }) => {
           <Button onClick={item ? callUpdateItem : callAddItem}>
             {item ? 'Atualizar' : 'Adicionar'}
           </Button>
-        </div>
-      </div>
-    </div>
+        </ButtonsContainer>
+      </ModalContentContainer>
+    </ModalBackgroundContainer>
   )
 }
